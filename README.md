@@ -1,6 +1,6 @@
 # Lita::Notify
 
-TODO: Write a gem description
+Lita Notification handler
 
 ## Installation
 
@@ -16,9 +16,12 @@ Or install it yourself as:
 
     $ gem install lita-notify
 
-## Usage
+## Dependencies
 
-TODO: Write usage instructions here
+You must have lita installed:
+
+    gem 'lita'
+    $ bundle
 
 ## Contributing
 
