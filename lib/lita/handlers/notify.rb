@@ -27,11 +27,26 @@ module Lita
       http.post "/notify", :web
 
       def web(_request, response)
+        puts '***'
+        puts 'request', _request
+        puts 'response', response
+        puts '***'
         response.headers["Content-Type"] = "application/json"
         json = MultiJson.dump(
           lita: notify
         )
         response.write(json)
+      end
+
+      def self.default_config(config)
+        puts '***'
+        puts 'config', config
+        puts '***'
+        config.key = ""
+      end
+
+      def self.namespace
+        'notify'
       end
     end
 
