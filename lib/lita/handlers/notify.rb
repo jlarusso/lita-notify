@@ -24,11 +24,8 @@ module Lita
 
       # Web API
       # -----------------------------------------------------------------------
-      http.get "/notify", :web
+      http.post "/notify", :web
 
-
-      # Web
-      # -----------------------------------------------------------------------
       def web(_request, response)
         response.headers["Content-Type"] = "application/json"
         json = MultiJson.dump(
